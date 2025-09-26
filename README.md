@@ -1,6 +1,7 @@
 # Inventory Management System - Multi-Language Implementation
 
 A comprehensive inventory management system implemented in both **Java (Spring Boot)** and **TypeScript (Express.js)** with identical functionality and APIs.
+YouTube : https://youtu.be/a9goL0oHtyc
 
 ## 🚀 Overview
 
