@@ -1,0 +1,120 @@
+# ===================================
+# Root .gitignore for Multi-Language Repository
+# ===================================
+
+# ===================================
+# Java/Maven (Spring Boot)
+# ===================================
+backend-java/**/target/
+backend-java/**/.mvn/wrapper/maven-wrapper.jar
+!backend-java/**/src/main/**/target/
+!backend-java/**/src/test/**/target/
+
+# Spring Tool Suite
+backend-java/**/.apt_generated
+backend-java/**/.classpath
+backend-java/**/.factorypath
+backend-java/**/.project
+backend-java/**/.settings
+backend-java/**/.springBeans
+backend-java/**/.sts4-cache
+
+# NetBeans
+backend-java/**/nbproject/private/
+backend-java/**/nbbuild/
+backend-java/**/dist/
+backend-java/**/nbdist/
+backend-java/**/.nb-gradle/
+backend-java/**/build/
+!backend-java/**/src/main/**/build/
+!backend-java/**/src/test/**/build/
+
+# ===================================
+# Node.js/TypeScript
+# ===================================
+backend-ts/**/node_modules/
+backend-ts/**/npm-debug.log*
+backend-ts/**/yarn-debug.log*
+backend-ts/**/yarn-error.log*
+backend-ts/**/dist/
+backend-ts/**/build/
+backend-ts/**/coverage/
+backend-ts/**/.nyc_output/
+
+# Environment variables
+backend-ts/**/.env
+backend-ts/**/.env.local
+backend-ts/**/.env.development.local
+backend-ts/**/.env.test.local
+backend-ts/**/.env.production.local
+
+# Database files
+backend-ts/**/*.db
+backend-ts/**/*.sqlite
+backend-ts/**/*.sqlite3
+
+# Logs
+backend-ts/**/logs/
+backend-ts/**/*.log
+
+# Runtime data
+backend-ts/**/pids/
+backend-ts/**/*.pid
+backend-ts/**/*.seed
+backend-ts/**/*.pid.lock
+
+# Coverage reports
+backend-ts/**/*.lcov
+
+# ===================================
+# IDEs and Editors
+# ===================================
+.vscode/
+.idea/
+*.iws
+*.iml
+*.ipr
+*.swp
+*.swo
+*~
+.kiro/
+
+# ===================================
+# Operating System
+# ===================================
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Windows
+Desktop.ini
+$RECYCLE.BIN/
+
+# ===================================
+# Temporary files
+# ===================================
+tmp/
+temp/
+*.tmp
+*.temp
+
+# ===================================
+# Package managers (optional - uncomment if needed)
+# ===================================
+# package-lock.json
+# yarn.lock
+
+# ===================================
+# Docker
+# ===================================
+.dockerignore
+
+# ===================================
+# Git
+# ===================================
+*.orig
+*.rej
