@@ -1,0 +1,92 @@
+### Inventory Management System API Test
+
+### 1. Create a new product
+POST http://localhost:8080/api/products
+Content-Type: application/json
+
+{
+  "name": "Gaming Laptop",
+  "description": "High-performance gaming laptop with RTX 4080",
+  "stockQuantity": 50,
+  "lowStockThreshold": 5
+}
+
+### 2. Get all products
+GET http://localhost:8080/api/products
+
+### 3. Get product by ID (replace {id} with actual ID from create response)
+GET http://localhost:8080/api/products/1
+
+### 4. Update product
+PUT http://localhost:8080/api/products/1
+Content-Type: application/json
+
+{
+  "name": "Gaming Laptop Pro",
+  "description": "Updated high-performance gaming laptop with RTX 4080",
+  "stockQuantity": 45,
+  "lowStockThreshold": 8
+}
+
+### 5. Increase stock
+POST http://localhost:8080/api/products/1/stock/increase
+Content-Type: application/json
+
+{
+  "quantity": 20
+}
+
+### 6. Decrease stock
+POST http://localhost:8080/api/products/1/stock/decrease
+Content-Type: application/json
+
+{
+  "quantity": 15
+}
+
+### 7. Try to decrease stock beyond available (should return 400)
+POST http://localhost:8080/api/products/1/stock/decrease
+Content-Type: application/json
+
+{
+  "quantity": 100
+}
+
+### 8. Create a low stock product
+POST http://localhost:8080/api/products
+Content-Type: application/json
+
+{
+  "name": "Wireless Mouse",
+  "description": "Ergonomic wireless mouse",
+  "stockQuantity": 3,
+  "lowStockThreshold": 10
+}
+
+### 9. Get low stock products
+GET http://localhost:8080/api/products/low-stock
+
+### 10. Delete product
+DELETE http://localhost:8080/api/products/1
+
+### 11. Try to get deleted product (should return 404)
+GET http://localhost:8080/api/products/1
+
+### 12. Test validation - invalid product (should return 400)
+POST http://localhost:8080/api/products
+Content-Type: application/json
+
+{
+  "name": "",
+  "description": "Invalid product",
+  "stockQuantity": -5,
+  "lowStockThreshold": -1
+}
+
+### 13. Test validation - invalid stock update (should return 400)
+POST http://localhost:8080/api/products/2/stock/increase
+Content-Type: application/json
+
+{
+  "quantity": 0
+}
