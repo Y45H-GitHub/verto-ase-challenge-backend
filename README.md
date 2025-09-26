@@ -4,6 +4,8 @@ A comprehensive inventory management system implemented in both **Java (Spring B
 
 ## 🚀 Overview
 
+<img width="1481" height="719" alt="image" src="https://github.com/user-attachments/assets/a656a9bd-fe75-402f-9445-04b6ab567c39" />
+
 This repository demonstrates a complete inventory management system built with enterprise-level best practices in two different technology stacks:
 
 - **Java Backend**: Spring Boot 3.5.6 with H2 Database
